@@ -48,7 +48,7 @@ export const Button: FC<Bprops> = (props) => {
           </button>
         </div>
       );
-    } else if (props.color === "gray"){
+    } else if (props.color === "gray") {
       return (
         <div>
           <button className=" bg-mgray text-sm hover:bg-dgray transition-all duration-300">
@@ -57,13 +57,13 @@ export const Button: FC<Bprops> = (props) => {
         </div>
       );
     } else {
-        return (
-            <div>
-            <button className=" bg-lyellow text-sm hover:bg-dyellow transition-all duration-300">
-              {props.desc}
-            </button>
-          </div>
-        )
+      return (
+        <div>
+          <button className=" bg-lyellow text-sm hover:bg-dyellow transition-all duration-300">
+            {props.desc}
+          </button>
+        </div>
+      );
     }
   }
 };

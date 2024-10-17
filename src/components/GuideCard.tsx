@@ -8,10 +8,10 @@ interface Cardprops {
 
 export const GuideCard: FC<Cardprops> = (props) => {
     return (
-        <div className="bg-myellow py-6 px-4 rounded-2xl w-1/3 hover:w-2/3 duration-300 transition-all overflow-hidden ">
+        <div className="bg-myellow py-6 px-4 rounded-2xl w-full lg:w-1/3 lg:hover:w-2/3 duration-300 transition-all overflow-hidden ">
             <h3 className="mb-12 font-semibold">{props.step}</h3>
-            <p className="mb-5 w-static text-base font-semibold">{props.title}</p>
-            <p className="w-static">{props.desc}</p>
+            <p className="mb-5 lg:w-static text-base font-semibold">{props.title}</p>
+            <p className=" lg:w-[450px] xl:w-static">{props.desc}</p>
         </div>
     )
 }

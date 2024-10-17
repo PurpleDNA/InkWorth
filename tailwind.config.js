@@ -5,6 +5,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        "open-menu": {
+          "0%" : {transform:"scaleY(0)"},
+          "80%" : {transform:"scaleY(1.2)"},
+          "100%" : {transform:"scaleY(1)"}
+        },
+      },
+      animation: {
+        "open-menu": 'open-menu 0.5s ease-in-out forwards',
+      },
       colors: {
         "greenn": "#1D6167",
         "mgray" : "#D1DFE0",
@@ -24,11 +34,11 @@ module.exports = {
         "poppins" : ["Poppins", "sans-serif"]
       },
       width : {
-        "static" : "600px"
+        "static" : "550px"
       },
       transitionTimingFunction: {
         "maroof-expo" : "cubic-bezier(0,1,0,1)"
-      }
+      },
     },
   },
   plugins: [],

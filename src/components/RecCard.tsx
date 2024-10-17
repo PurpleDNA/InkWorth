@@ -1,11 +1,11 @@
 import { FC } from "react";
 import React from 'react';
-import dp from "../PNGsss/profile picture.jpg";
+import dp from "../assets/profile picture.jpg";
 
 export const RecCard: FC = () => {
     return (
-        <div className="recommendation-card bg-fgreenn flex flex-col justify-between p-6 rounded-3xl gap-4 w-1/3">
-            <div className="flex justify-between ">
+        <div className="recommendation-card bg-fgreenn flex flex-col justify-between p-6 rounded-3xl gap-4">
+            <div className="flex justify-between items-center">
               <div className="identity">
                 <img
                   src={dp}

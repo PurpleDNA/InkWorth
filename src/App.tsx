@@ -5,11 +5,11 @@ import { RecCard } from "./components/RecCard";
 import { Button } from "./components/Buttons";
 import { GuideCard, CardData } from "./components/GuideCard";
 import { Footer } from "./components/TFooter";
-import Earnings from "./PNGsss/Earnings.jpg";
-import fAppendage from "./PNGsss/Feather appendage.png";
-import workspace from "./PNGsss/workspace.png";
-import journey from "./PNGsss/journey.png";
-import icp from "./PNGsss/ICP.jpg";
+import Earnings from "./assets/earnings.jpg";
+import fAppendage from "./assets/feather appendage.png";
+import workspace from "./assets/workspace.png";
+import journey from "./assets/journey.png";
+import icp from "./assets/icp.jpg";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faWallet } from "@fortawesome/free-solid-svg-icons";
 import FAQ from "./components/FAQ";
@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="font-sofia">
       <Navbar />
-      <main className=" flex justify-between items-center container mt-6">
-        <div className="flex flex-col gap-7 w-3/5">
+      <main className=" flex-col gap-10 xl:flex-row flex justify-between items-center container mt-6 w-[90%]">
+        <div className="flex flex-col gap-7 w-full xl:w-3/5">
           <p className="font-bold text-8xl">
             Earn while you read and write on{" "}
             <span className="text-greenn font-sofia">InkWorth</span>.
@@ -49,13 +49,13 @@ function App() {
           />
         </div>
       </main>
-      <section className="recommendations flex flex-col container mt-32 gap-12">
+      <section className="recommendations flex flex-col container mt-32 gap-12 w-[90%]">
         <div>
           <span className="rounded-3xl font-sofia bg-creamy px-8 py-5 inline w-auto ">
             Recommended
           </span>
         </div>
-        <div className="testimonials flex gap-8">
+        <div className="testimonials grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
           <RecCard />
           <RecCard />
           <RecCard />
@@ -64,7 +64,7 @@ function App() {
           <Button desc="Discover More" icon={faArrowRight} color="dgreen" />
         </div>
       </section>
-      <section className="journey container flex flex-col gap-9">
+      <section className="journey container flex flex-col gap-9 w-[90%]">
         <h2 className="text-5xl font-bold text-center ">
           Your Journey with <span className="text-dgreenn">InkWorth</span>
         </h2>
@@ -111,11 +111,11 @@ function App() {
           <Button icon={faArrowRight} desc="Get Started" color="yellow" />
         </div>
       </section>
-      <section className="icp_blockchain container grid grid-cols-2">
-        <div>
-          <img src={icp} alt="ICP Blockchain logo" className="w-auto h-5/6" />
+      <section className="icp_blockchain container grid grid-flow-row md:grid-flow-col md:grid-cols-[1fr_1fr] gap-10 w-[90%]">
+        <div className="flex justify-center items-center ">
+          <img src={icp} alt="ICP Blockchain logo" className="w-[300px] h-[300px] lg:w-full lg:h-auto" />
         </div>
-        <div className="icp-text flex flex-col gap-5 py-4">
+        <div className="icp-text flex flex-col gap-5 py-4 md:w-full">
           <h2 className="icp-title font-bold text-5xl">
             Powered by ICP Blockchain
           </h2>
@@ -134,13 +134,13 @@ function App() {
           </p>
         </div>
       </section>
-      <section className=" guide container mt-0 flex flex-col gap-8">
+      <section id="How" className=" guide container flex flex-col gap-8 w-[90%]">
         <div>
           <h2 className="guide_title font-bold text-5xl">
             Guide to Starting Your Writing Adventure
           </h2>
         </div>
-        <div className="guide-desc flex justify-between items-center">
+        <div className="guide-desc flex justify-between items-start flex-col gap-5 md:flex-row">
           <p>
             Get Started with Ink Worth and unlock your potential as a writer.
             Learn <br /> how to set up your account and begin earning from your
@@ -148,13 +148,13 @@ function App() {
           </p>
           <Button desc="Get Started" icon={faArrowRight} color="gray" />
         </div>
-        <div className="flex justify-between gap-4">
+        <div className="flex justify-between flex-col lg:flex-row gap-4">
           <GuideCard {...CardData.card1} />
           <GuideCard {...CardData.card2} />
           <GuideCard {...CardData.card3} />
         </div>
       </section>
-      <section className="waitlist bg-dblue container rounded-3xl py-16 flex flex-col items-center -z-20">
+      <section className="waitlist bg-dblue container rounded-3xl py-16 flex flex-col items-center w-[90%]">
         <h1 className="waitlist-title text-center font-bold text-5xl text-white">
           Ready to Start <br />
           <p className="mt-3">
@@ -176,8 +176,8 @@ function App() {
           </button>
         </div>
       </section>
-      <section className="container flex justify-between gap-12">
-        <div className="flex flex-col justify-between w-1/3">
+      <section className="container flex justify-between gap-12 flex-col lg:flex-row w-[90%]" id="Contact">
+        <div className="flex flex-col justify-between w-full lg:w-1/3 gap-6">
           <h2 className="text-5xl font-bold">Frequently Asked Questions</h2>
           <div className=" bg-creamy p-5 rounded-lg border-lyellow border-2">
             <p className="text-3xl mb-4">Send us an Email now</p>
@@ -190,7 +190,7 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col justify-between w-2/3"><FAQ/></div>
+        <div className="flex flex-col justify-between w-full lg:w-2/3"><FAQ/></div>
       </section>
       <Footer />
     </div>
